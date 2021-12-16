@@ -1,10 +1,39 @@
-.logoContainer {
-  display: flex;
-  width: auto;
+$color-header-background: #50dbb4;
 
-  p {
-    font-weight: bold;
-    font-size: 36;
-    margin-left: 12px;
+.header {
+  background-color: $color-header-background;
+  width: 100%;
+
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .mainLogo:hover {
+      cursor: pointer;
+    }
+
+    .iconLogo {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      border: 1px solid #777;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 12px;
+
+      p {
+        margin-left: 14px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
