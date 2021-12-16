@@ -18,10 +18,43 @@ export default function Home() {
         <Container>
           <h1>Online Order</h1>
           <h2>Available Cards</h2>
-          <ul>
+          <ul className={styles.products}>
             <li>
-              <img src="" alt="" />
-              <h3>Product Name</h3>
+              <img
+                src="/collections/analog-watch-men.jpg"
+                alt="Analog Watch For Men"
+              />
+              <h3>Analog Watch For Men</h3>
+              <p>$99.99</p>
+              <button>Add to Cart</button>
+            </li>
+
+            <li>
+              <img
+                src="/collections/analog-watch-men.jpg"
+                alt="Analog Watch For Men"
+              />
+              <h3>Analog Watch For Men</h3>
+              <p>$99.99</p>
+              <button>Add to Cart</button>
+            </li>
+
+            <li>
+              <img
+                src="/collections/analog-watch-men.jpg"
+                alt="Analog Watch For Men"
+              />
+              <h3>Analog Watch For Men</h3>
+              <p>$99.99</p>
+              <button>Add to Cart</button>
+            </li>
+
+            <li>
+              <img
+                src="/collections/analog-watch-men.jpg"
+                alt="Analog Watch For Men"
+              />
+              <h3>Analog Watch For Men</h3>
               <p>$99.99</p>
               <button>Add to Cart</button>
             </li>
