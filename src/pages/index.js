@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import styles from "@styles/Home.module.scss";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
@@ -22,7 +23,12 @@ export default function Home() {
           <ul className={styles.products}>
             {Products.map((product) => (
               <li key={product.title}>
-                <img src={product.image} alt={product.title} />
+                <Image
+                  width="864"
+                  height="1200"
+                  src={product.image}
+                  alt={`Card for ${product.title}`}
+                />
                 <h3 className={styles.productTitle}>{product.title}</h3>
                 <p className={styles.productPrice}>${product.price}</p>
                 <Button>Add to Cart</Button>
