@@ -3,6 +3,7 @@ import styles from "@styles/Home.module.scss";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Container from "@components/Container";
+import Products from "@data/products.json";
 
 export default function Home() {
   return (
@@ -19,45 +20,14 @@ export default function Home() {
           <h1>Online Order</h1>
           <h2>Available Cards</h2>
           <ul className={styles.products}>
-            <li>
-              <img
-                src="/collections/analog-watch-men.jpg"
-                alt="Analog Watch For Men"
-              />
-              <h3>Analog Watch For Men</h3>
-              <p>$99.99</p>
-              <button>Add to Cart</button>
-            </li>
-
-            <li>
-              <img
-                src="/collections/analog-watch-men.jpg"
-                alt="Analog Watch For Men"
-              />
-              <h3>Analog Watch For Men</h3>
-              <p>$99.99</p>
-              <button>Add to Cart</button>
-            </li>
-
-            <li>
-              <img
-                src="/collections/analog-watch-men.jpg"
-                alt="Analog Watch For Men"
-              />
-              <h3>Analog Watch For Men</h3>
-              <p>$99.99</p>
-              <button>Add to Cart</button>
-            </li>
-
-            <li>
-              <img
-                src="/collections/analog-watch-men.jpg"
-                alt="Analog Watch For Men"
-              />
-              <h3>Analog Watch For Men</h3>
-              <p>$99.99</p>
-              <button>Add to Cart</button>
-            </li>
+            {Products.map((product) => (
+              <li key={product.title}>
+                <img src={product.image} alt={product.title} />
+                <h3>{product.title}</h3>
+                <p>${product.price}</p>
+                <button>Add to Cart</button>
+              </li>
+            ))}
           </ul>
         </Container>
       </main>
