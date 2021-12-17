@@ -3,6 +3,7 @@ import styles from "@styles/Home.module.scss";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Container from "@components/Container";
+import Button from "@components/Button";
 import Products from "@data/products.json";
 
 export default function Home() {
@@ -17,15 +18,14 @@ export default function Home() {
       <Header />
       <main>
         <Container>
-          <h1>Online Order</h1>
           <h2>Available Cards</h2>
           <ul className={styles.products}>
             {Products.map((product) => (
               <li key={product.title}>
                 <img src={product.image} alt={product.title} />
-                <h3>{product.title}</h3>
-                <p>${product.price}</p>
-                <button>Add to Cart</button>
+                <h3 className={styles.productTitle}>{product.title}</h3>
+                <p className={styles.productPrice}>${product.price}</p>
+                <Button>Add to Cart</Button>
               </li>
             ))}
           </ul>
