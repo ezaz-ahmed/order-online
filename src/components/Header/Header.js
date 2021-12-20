@@ -1,5 +1,6 @@
 import styles from "./Header.module.scss";
 import Image from "next/image";
+
 import Logo from "@images/Logo.png";
 import Container from "@components/Container";
 import { BsCart4 } from "react-icons/bs";
@@ -16,10 +17,12 @@ const Header = () => {
           className={styles.mainLogo}
         />
 
-        <div className={styles.iconLogo}>
-          <BsCart4 />
-          <p>$0.00</p>
-        </div>
+        <button className="snipcart-checkout">
+          <p>
+            <BsCart4 />
+            <span className="snipcart-total-price">-</span>
+          </p>
+        </button>
       </Container>
     </header>
   );
